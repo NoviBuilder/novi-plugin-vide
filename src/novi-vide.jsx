@@ -8,7 +8,7 @@ const Plugin = {
     name: "novi-plugin-vide",
     title: "Novi Vide",
     description: "Novi Vide description",
-    version: "1.0.0",
+    version: "1.0.1",
     dependencies: {
     },
     defaults: {

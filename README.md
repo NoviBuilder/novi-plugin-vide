@@ -11,19 +11,19 @@ You should follow several simple steps to install this plugin:
 * Change poster image
 
 ## Developer Settings
-* querySelector — contains a css selector which defines the Camera Slider main container.
+* querySelector — contains a css selector which defines the Vide main container.
 
 ## How to add Vide on your page
 If your website doesn't contain Vide follow the instructions below to install it.
 
 ### Include Vide files to Website
-Copy the "assets/vide.js" and "assets/camera.css" to website's JS and CSS folders respectively and include this files to your website.
+Copy the "assets/vide.js" and "assets/vide.css" to website's JS and CSS folders respectively and include this files to your website.
 
 ### Add Vide HTML Layout
 To use the plug-in correctly, you need to use the following page layout.
-We expanded the basic script API, added the following attributes:
-data-vide-path - path to video file
-data-vide-poster - path to poster image
+We added to the basic script API folowing attributes:
+* data-vide-path - path to video file
+* data-vide-poster - path to poster image
 
 Add basic Vide HTML Layout:
 
