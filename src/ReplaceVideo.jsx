@@ -1,8 +1,7 @@
 const React = novi.react.React;
 const Icons = novi.ui.icons;
 const Icon = novi.ui.icon;
-const modal = novi.modal;
-const acceptVideos = novi.types.videos;
+const Types = novi.types;
 
 const ReplaceVideo = {
     trigger: <Icon>{Icons.ICON_FILM_PLAY}</Icon>,
@@ -16,19 +15,10 @@ export default ReplaceVideo;
 
 
 function onClick(element) {
-    modal.fileUpload({
-        path: novi.video.directory,
-        accept: acceptVideos,
-        messages: {
-            submit: "Upload an video",
-            title: "Upload an video",
-            body: 'Click on "Choose File" to upload your video.'
-        },
-        onSubmitClick: onSubmitClick.bind(this, element)
-    })
+    novi.media.choose({onSubmit: onSumbit.bind(this,element), type: Types.mediaVideo});
 }
 
-function onSubmitClick(element, path, data) {
+function onSumbit(element, path) {
     let correctPath = path.replace(/['|"]/g, ``);
 
     novi.element.setAttribute(element, "data-vide-path", correctPath);
