@@ -2,6 +2,7 @@ const React = novi.react.React;
 const Icons = novi.ui.icons;
 const Icon = novi.ui.icon;
 const Types = novi.types;
+import * as Utils from "./Utils";
 
 const ReplaceVideo = {
     trigger: <Icon>{Icons.ICON_FILM_PLAY}</Icon>,
@@ -19,8 +20,16 @@ function onClick(element) {
 }
 
 function onSumbit(element, path) {
-    let correctPath = path.replace(/['|"]/g, ``);
+    let correctPath, videBg, videOpts, videData;
 
-    novi.element.setAttribute(element, "data-vide-path", correctPath);
+    correctPath = path.replace(/['|"]/g, ``);
+    videBg = novi.element.getAttribute(element, "data-vide-bg");
+    videOpts = novi.element.getAttribute(element, "data-vide-options");
+
+    videData = Utils.getVideData({videBg, videOpts, video: correctPath});
+
+    novi.element.setAttribute(element, "data-vide-bg", videData.bg);
+    novi.element.setAttribute(element, "data-vide-options", videData.opts);
+
     novi.page.forceUpdate();
 }

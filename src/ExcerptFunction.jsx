@@ -5,6 +5,6 @@ export function validVideo(element){
 }
 
 function getAction(element){
-    let videoPath = novi.element.getAttribute(element, 'data-vide-path');
+    let videoPath = novi.element.getAttribute(element, 'data-vide-bg');
     return videoPath;
 }
