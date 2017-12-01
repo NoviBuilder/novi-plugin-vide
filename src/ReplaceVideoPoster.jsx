@@ -2,12 +2,12 @@ const React = novi.react.React;
 const Icons = novi.ui.icons;
 const Types = novi.types;
 import * as Utils from "./Utils";
-
+const messages = novi.language.getDataByKey("novi-plugin-vide");
 const ReplaceVideoPoster = {
     trigger: Icons.ICON_BG_IMAGE,
-    tooltip: "Replace Poster Image",
+    tooltip: messages.editor.replacePoster.tooltip,
     closeIcon: "submit",
-    title: "Replace Poster",
+    title: messages.editor.replacePoster.title,
     onTriggerClick: onClick
 };
 

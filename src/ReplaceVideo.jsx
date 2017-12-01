@@ -3,12 +3,12 @@ const Icons = novi.ui.icons;
 const Icon = novi.ui.icon;
 const Types = novi.types;
 import * as Utils from "./Utils";
-
+const messages = novi.language.getDataByKey("novi-plugin-vide");
 const ReplaceVideo = {
     trigger: <Icon>{Icons.ICON_FILM_PLAY}</Icon>,
-    tooltip: "Replace Video",
+    tooltip: messages.editor.replaceVideo.tooltip,
     closeIcon: "submit",
-    title: "Replace Video",
+    title: messages.editor.replaceVideo.title,
     onTriggerClick: onClick
 };
 
