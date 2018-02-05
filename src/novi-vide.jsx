@@ -8,9 +8,9 @@ const Plugin = {
     name: "novi-plugin-vide",
     title: "Novi Vide",
     description: "Novi Vide description",
-    version: "1.0.3",
+    version: "1.0.4",
     dependencies: {
-        novi: "0.8.6"
+        novi: "0.9.0"
     },
     defaults: {
         querySelector: '.novi-vide'

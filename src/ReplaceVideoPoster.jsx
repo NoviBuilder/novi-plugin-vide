@@ -16,7 +16,7 @@ export default ReplaceVideoPoster;
 
 function onClick(element) {
     let ratio = element.offsetWidth / element.offsetHeight;
-    novi.media.choose({onSubmit: onSubmitCrop.bind(this,element), type: Types.mediaImage, ratio})
+    novi.media.choose({onSubmit: onSubmitCrop.bind(this,element), type: Types.mediaImage, width: element.offsetWidth, height: element.offsetHeight})
 }
 
 function onSubmitCrop(element, path){
